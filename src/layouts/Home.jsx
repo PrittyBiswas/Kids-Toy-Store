@@ -121,7 +121,7 @@ const Home = () => {
 
                 {/* Category Collections Section - RENDERING THE NEW COMPONENT */}
                 <section className="mb-10">
-                    {/* The ToyCollections component is now correctly rendered here */}
+                    
                     <ToyCollections />
                 </section>
 
