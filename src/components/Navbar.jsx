@@ -12,8 +12,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar sticky top-0 z-50 shadow-md bg-base-300 text-base-content p-5">
-      <div className="container mx-auto flex justify-between items-center md:px-4">
+    <nav className="navbar sticky top-0 z-50 shadow-md bg-base-300 text-base-content ">
+      <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link
           to="/"
@@ -29,7 +29,7 @@ export default function Navbar() {
             className={({ isActive }) =>
               `px-3 py-1 rounded-md transition ${isActive
                 ? "text-pink-700 bg-white shadow-sm"
-                : "text-gray-700 hover:text-pink-600 hover:bg-white/70"
+                : "text-pink-700 hover:text-pink-600 hover:bg-white/70"
               }`
             }
           >
@@ -41,7 +41,7 @@ export default function Navbar() {
             className={({ isActive }) =>
               `px-3 py-1 rounded-md transition ${isActive
                 ? "text-pink-700 bg-white shadow-sm"
-                : "text-gray-700 hover:text-pink-600 hover:bg-white/70"
+                : "text-pink-700 hover:text-pink-600 hover:bg-white/70"
               }`
             }
           >
@@ -53,7 +53,7 @@ export default function Navbar() {
             className={({ isActive }) =>
               `px-3 py-1 rounded-md transition ${isActive
                 ? "text-pink-700 bg-white shadow-sm"
-                : "text-gray-700 hover:text-pink-600 hover:bg-white/70"
+                : "text-pink-700 hover:text-pink-600 hover:bg-white/70"
               }`
             }
           >
