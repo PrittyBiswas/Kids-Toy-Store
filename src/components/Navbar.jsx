@@ -1,114 +1,96 @@
-import { NavLink, useNavigate } from "react-router";
-import { useState } from "react";
-import logo from '../assets/Toy_Story_logo.svg.png';
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 
-const Navbar = () => {
-    const navigate = useNavigate();
+export default function Navbar() {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
 
-    // Simulated user auth (replace with your real auth logic)
-    const [user, setUser] = useState({
-        loggedIn: true,
-        name: "Pritty Biswas",
-        photo: "https://i.pravatar.cc/40?img=3",
-    });
+  const onLogout = async () => {
+    await logout();
+    navigate("/");
+  };
 
-    const handleLogout = () => {
-        setUser(null);
-        navigate("/login");
-    };
+  return (
+    <nav className="navbar sticky top-0 z-50 bg-gradient-to-r from-pink-200 via-yellow-100 to-emerald-100 shadow-md backdrop-blur">
+      <div className="container mx-auto flex justify-between items-center px-2 md:px-4">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="text-3xl font-extrabold text-pink-700 tracking-tight drop-shadow-sm hover:scale-105 transition-transform"
+        >
+          Toy<span className="text-emerald-600">Topia</span>
+        </Link>
 
-    return (
-        <nav className="bg-white shadow-md">
-            <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-                {/* Website logo */}
+        {/* Navigation Links */}
+        <div className="flex gap-3 md:gap-6 items-center font-medium">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `px-3 py-1 rounded-md transition ${
+                isActive
+                  ? "text-pink-700 bg-white shadow-sm"
+                  : "text-gray-700 hover:text-pink-600 hover:bg-white/70"
+              }`
+            }
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="/profile"
+            className={({ isActive }) =>
+              `px-3 py-1 rounded-md transition ${
+                isActive
+                  ? "text-pink-700 bg-white shadow-sm"
+                  : "text-gray-700 hover:text-pink-600 hover:bg-white/70"
+              }`
+            }
+          >
+            Profile
+          </NavLink>
+
+          <NavLink
+            to="/extra"
+            className={({ isActive }) =>
+              `px-3 py-1 rounded-md transition ${
+                isActive
+                  ? "text-pink-700 bg-white shadow-sm"
+                  : "text-gray-700 hover:text-pink-600 hover:bg-white/70"
+              }`
+            }
+          >
+            Exclusive
+          </NavLink>
+        </div>
+
+        {/* User section */}
+        <div className="flex items-center gap-3">
+          {user ? (
+            <>
+              <div className="tooltip tooltip-bottom" data-tip={user.displayName || user.email}>
                 <img
-                    onClick={() => navigate("/")}
-                    src={logo}
-                    alt="Website Logo"
-                    className="w-10 h-10 cursor-pointer"
+                  src={user.photoURL || "https://i.pravatar.cc/40"}
+                  alt="avatar"
+                  className="w-10 h-10 rounded-full border-2 border-pink-500 shadow-sm hover:scale-105 transition-transform"
                 />
-
-
-                {/* Navigation links */}
-                <div className="hidden md:flex items-center space-x-8">
-                    <NavLink
-                        to="/"
-                        className={({ isActive }) =>
-                            `font-medium ${isActive ? "text-[#1B91B0]" : "text-gray-700"
-                            } hover:text-[#1B91B0]`
-                        }
-                    >
-                        Home
-                    </NavLink>
-
-                    <NavLink
-                        to="/profile"
-                        className={({ isActive }) =>
-                            `font-medium ${isActive ? "text-[#1B91B0]" : "text-gray-700"
-                            } hover:text-[#1B91B0]`
-                        }
-                    >
-                        My Profile
-                    </NavLink>
-                </div>
-
-                {/* Right-side section */}
-                <div className="flex items-center space-x-4">
-                    {user && user.loggedIn ? (
-                        <>
-                            {/* User image with hover name */}
-                            <div className="relative group">
-                                <img
-                                    src={user.photo}
-                                    alt="User"
-                                    className="w-10 h-10 rounded-full border-2 border-[#1B91B0] cursor-pointer"
-                                />
-                                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
-                                    {user.name}
-                                </span>
-                            </div>
-
-                            <button
-                                onClick={handleLogout}
-                                className="px-4 py-2 text-white bg-[#1B91B0] rounded-md hover:bg-[#147a8f] transition"
-                            >
-                                Logout
-                            </button>
-                        </>
-                    ) : (
-                        <button
-                            onClick={() => navigate("/login")}
-                            className="px-4 py-2 text-white bg-[#1B91B0] rounded-md hover:bg-[#147a8f] transition"
-                        >
-                            Login
-                        </button>
-                    )}
-                </div>
-            </div>
-
-            {/* Mobile view */}
-            <div className="md:hidden border-t border-gray-200 flex justify-around py-2">
-                <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                        `text-sm ${isActive ? "text-[#1B91B0]" : "text-gray-700"
-                        } hover:text-[#1B91B0]`
-                    }
-                >
-                    Home
-                </NavLink>
-                <NavLink
-                    to="/profile"
-                    className={({ isActive }) =>
-                        `text-sm ${isActive ? "text-[#1B91B0]" : "text-gray-700"
-                        } hover:text-[#1B91B0]`
-                    }
-                >
-                    My Profile
-                </NavLink>
-            </div>
-        </nav>
-    );
-};
-
-export default Navbar;
+              </div>
+              <button
+                onClick={onLogout}
+                className="btn btn-outline btn-sm border-pink-400 text-gray-800 hover:bg-pink-400 hover:text-white transition"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link
+              to="/login"
+              className="btn btn-primary rounded-full bg-pink-500 border-none text-white hover:bg-pink-600 transition"
+            >
+              Login
+            </Link>
+          )}
+        </div>
+      </div>
+    </nav>
+  );
+}
