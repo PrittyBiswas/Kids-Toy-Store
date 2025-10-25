@@ -53,11 +53,11 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
+    <div className="min-h-screen flex items-center justify-center border-pink-700 px-4">
+      <div className="w-full max-w-md text-white  rounded-2xl shadow-lg border  border-pink-700 p-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Sign in to ToyTopia</h1>
+          <h1 className="text-3xl font-bold">Sign in to ToyTopia</h1>
           <p className="text-gray-500 text-sm mt-1">
             Access your account and manage your toys
           </p>
@@ -66,7 +66,7 @@ export default function Login() {
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium mb-1">
               Email
             </label>
             <input
@@ -75,12 +75,12 @@ export default function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="input input-bordered w-full bg-gray-50 border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-lg"
+              className="input input-bordered w-full pl-4 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-lg"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium mb-1">
               Password
             </label>
             <input
@@ -89,13 +89,13 @@ export default function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="input input-bordered w-full bg-gray-50 border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-lg"
+              className="input input-bordered w-full pl-4 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 rounded-lg"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition shadow-sm hover:shadow-md"
+            className="w-full py-3 bg-pink-600 hover:bg-pink-700 text-white font-semibold rounded-lg transition shadow-sm hover:shadow-md"
           >
             Sign In
           </button>

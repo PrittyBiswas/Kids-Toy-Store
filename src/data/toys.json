@@ -8,7 +8,7 @@
     "rating": 4.7,
     "availableQuantity": 75,
     "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving.",
-    "pictureURL": "https://i.ibb.co/8m2Fz2m/lego.png",
+    "pictureURL": "https://m.media-amazon.com/images/I/81vrb7R4PJL.jpg",
     "subCategory": "Building Blocks"
   },
   {
@@ -20,7 +20,7 @@
     "rating": 4.5,
     "availableQuantity": 40,
     "description": "A classic wooden train set with colorful tracks and cars.",
-    "pictureURL": "https://i.ibb.co/2sZ0G2Q/train.png",
+    "pictureURL": "https://assets.pkimgs.com/pkimgs/ab/images/dp/wcm/202537/0022/wooden-train-set-o.jpg",
     "subCategory": "Vehicles"
   },
   {
@@ -32,7 +32,7 @@
     "rating": 4.8,
     "availableQuantity": 120,
     "description": "Soft and cuddly teddy bear for all ages.",
-    "pictureURL": "https://i.ibb.co/1bZHK2h/teddy.png",
+    "pictureURL": "https://www.pioupiou-et-merveilles.fr/7942-thickbox_default/giant-teddy-bear-gaston-grey-80cm.jpg",
     "subCategory": "Plush"
   },
   {
@@ -44,7 +44,7 @@
     "rating": 4.2,
     "availableQuantity": 60,
     "description": "Collectible action figures with movable joints.",
-    "pictureURL": "https://i.ibb.co/Yd6bK4F/action.png",
+    "pictureURL": "https://i5.walmartimages.com/seo/Toy-Story-Woody-Rex-Lightyear-Alien-Bear-Movie-Action-Figure-Kids-Toy-Gift-10pcs_40a9be98-1ce9-4ab8-9f52-fe47568d1e0d.0988485665dcd4fe63bad6b3341c5b21.jpeg",
     "subCategory": "Action Figures"
   },
   {
@@ -56,7 +56,7 @@
     "rating": 4.6,
     "availableQuantity": 200,
     "description": "Educational puzzle to help concentration and problem solving.",
-    "pictureURL": "https://i.ibb.co/7gH0q4b/puzzle.png",
+    "pictureURL": "https://www.perfectoys.gr/uplds/388525_497985-1.jpg",
     "subCategory": "Puzzles"
   },
   {
@@ -68,7 +68,79 @@
     "rating": 4.3,
     "availableQuantity": 30,
     "description": "Fast remote controlled car with rechargeable battery.",
-    "pictureURL": "https://i.ibb.co/0MXrJ7B/rc-car.png",
+    "pictureURL": "https://m.media-amazon.com/images/I/81udrb2swIL._AC_SL1500_.jpg",
     "subCategory": "Electronics"
+  },
+  {
+    "toyId": 7,
+    "toyName": "Play-Doh Fun Pack",
+    "sellerName": "CreativeHands",
+    "sellerEmail": "orders@creativehands.com",
+    "price": 24.99,
+    "rating": 4.4,
+    "availableQuantity": 90,
+    "description": "A colorful pack of Play-Doh tubs that lets kids create anything they imagine.",
+    "pictureURL": "https://m.media-amazon.com/images/I/81+PpZ8LZXL._AC_SL1500_.jpg",
+    "subCategory": "Art & Craft"
+  },
+  {
+    "toyId": 8,
+    "toyName": "Robot Dog Toy",
+    "sellerName": "TechPlay",
+    "sellerEmail": "support@techplay.com",
+    "price": 69.99,
+    "rating": 4.6,
+    "availableQuantity": 45,
+    "description": "Interactive robot dog with voice control, dancing, and light-up eyes.",
+    "pictureURL": "https://m.media-amazon.com/images/I/71VY9L4H44L._AC_SL1500_.jpg",
+    "subCategory": "Electronics"
+  },
+  {
+    "toyId": 9,
+    "toyName": "Dinosaur Figures Set",
+    "sellerName": "JurassicFun",
+    "sellerEmail": "contact@jurassicfun.com",
+    "price": 27.5,
+    "rating": 4.7,
+    "availableQuantity": 85,
+    "description": "Set of realistic dinosaur figures for imaginative play and learning.",
+    "pictureURL": "https://m.media-amazon.com/images/I/81Iv+P5sB5L._AC_SL1500_.jpg",
+    "subCategory": "Action Figures"
+  },
+  {
+    "toyId": 10,
+    "toyName": "Barbie Dreamhouse Doll",
+    "sellerName": "DollWorld",
+    "sellerEmail": "info@dollworld.com",
+    "price": 89.99,
+    "rating": 4.8,
+    "availableQuantity": 25,
+    "description": "Classic Barbie doll with dreamhouse accessories for creative storytelling.",
+    "pictureURL": "https://m.media-amazon.com/images/I/71y-7R9bMqL._AC_SL1500_.jpg",
+    "subCategory": "Dolls"
+  },
+  {
+    "toyId": 11,
+    "toyName": "Magnetic Building Tiles",
+    "sellerName": "BuildSmart",
+    "sellerEmail": "service@buildsmart.com",
+    "price": 44.99,
+    "rating": 4.9,
+    "availableQuantity": 100,
+    "description": "STEM toy with colorful magnetic tiles that help children learn shapes and engineering.",
+    "pictureURL": "https://m.media-amazon.com/images/I/71c5V1U8eaL._AC_SL1500_.jpg",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 12,
+    "toyName": "Memory Match Card Game",
+    "sellerName": "BrainyToys",
+    "sellerEmail": "hello@brainytoys.com",
+    "price": 12.99,
+    "rating": 4.5,
+    "availableQuantity": 180,
+    "description": "A fun and educational memory game designed to boost focus and recall in kids.",
+    "pictureURL": "https://m.media-amazon.com/images/I/81qXj7dGpwL._AC_SL1500_.jpg",
+    "subCategory": "Educational"
   }
 ]

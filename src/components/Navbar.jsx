@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar sticky top-0 z-50 shadow-md bg-base-300 text-base-content ">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center font-bold">
         {/* Logo */}
         <Link
           to="/"
@@ -23,13 +23,13 @@ export default function Navbar() {
         </Link>
 
         {/* Navigation Links */}
-        <div className="flex gap-3 md:gap-6 items-center font-medium">
+        <div className="flex gap-3 md:gap-6 items-center font-bold">
           <NavLink
             to="/"
             className={({ isActive }) =>
               `px-3 py-1 rounded-md transition ${isActive
-                ? "text-pink-700 bg-white shadow-sm"
-                : "text-pink-700 hover:text-pink-600 hover:bg-white/70"
+                ? "text-pink-700 bg-pink shadow-sm underline"
+                : "text-pink-700 hover:text-white hover:bg-pink-500"
               }`
             }
           >
@@ -40,8 +40,8 @@ export default function Navbar() {
             to="/profile"
             className={({ isActive }) =>
               `px-3 py-1 rounded-md transition ${isActive
-                ? "text-pink-700 bg-white shadow-sm"
-                : "text-pink-700 hover:text-pink-600 hover:bg-white/70"
+                ? "text-pink-700 bg-pink shadow-sm underline"
+                : "text-pink-700 hover:text-white hover:bg-pink-500"
               }`
             }
           >
@@ -49,15 +49,16 @@ export default function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/extra"
+            to="/contact"
             className={({ isActive }) =>
               `px-3 py-1 rounded-md transition ${isActive
-                ? "text-pink-700 bg-white shadow-sm"
-                : "text-pink-700 hover:text-pink-600 hover:bg-white/70"
+                ? "text-pink-700 bg-pink shadow-sm underline"
+                : "text-pink-700 hover:text-white hover:bg-pink-500"
+
               }`
             }
           >
-            Exclusive
+            Contact
           </NavLink>
         </div>
 
@@ -67,14 +68,14 @@ export default function Navbar() {
             <>
               <div className="tooltip tooltip-bottom" data-tip={user.displayName || user.email}>
                 <img
-                  src={user.photoURL || "https://i.pravatar.cc/40"}
+                  src="https://www.svgrepo.com/show/382097/female-avatar-girl-face-woman-user-9.svg"
                   alt="avatar"
                   className="w-10 h-10 rounded-full border-2 border-pink-500 shadow-sm hover:scale-105 transition-transform"
                 />
               </div>
               <button
                 onClick={onLogout}
-                className="btn btn-outline btn-sm border-pink-400 text-gray-800 hover:bg-pink-400 hover:text-white transition"
+                className="btn btn-outline btn-sm  border-pink-400 text-pink-800 hover:bg-pink-400 hover:text-white transition"
               >
                 Logout
               </button>

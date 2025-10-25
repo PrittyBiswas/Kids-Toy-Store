@@ -6,9 +6,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
 import Profile from "./pages/Profile";
-import ExtraPrivatePage from "./pages/ExtraPrivatePage";
+import ExtraPrivatePage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 import { AuthProvider, useAuth } from "./hooks/useAuth";
+import ContactPage from "./pages/ContactPage";
 
 function PrivateRoute({ children }) {
   const { user, loading } = useAuth();
@@ -26,7 +27,7 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="toy/:id" element={<PrivateRoute><ToyDetails /></PrivateRoute>} />
             <Route path="profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
-            <Route path="extra" element={<PrivateRoute><ExtraPrivatePage /></PrivateRoute>} />
+            <Route path="contact" element={<PrivateRoute><ContactPage></ContactPage></PrivateRoute>} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="forgot-password" element={<ForgotPassword />} />
