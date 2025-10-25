@@ -45,6 +45,7 @@ export default function Navbar() {
                 : "text-pink-700 hover:text-white hover:bg-pink-500"
               }`
             }
+
           >
             Profile
           </NavLink>
@@ -57,6 +58,7 @@ export default function Navbar() {
                 : "text-pink-700 hover:text-white hover:bg-pink-500"
               }`
             }
+
           >
             Contact
           </NavLink>

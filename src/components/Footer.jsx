@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="flex items-center   justify-center bg-gray-700 " >
-      <div className="footer justify-center gap-10 sm:footer-horizontal text-base-content px-10 py-8">
+    <footer className=" items-center   justify-center bg-gray-700 " >
+      <div className="footer  justify-center gap-10 sm:footer-horizontal text-base-content px-10 py-8">
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
@@ -55,7 +55,14 @@ export default function Footer() {
             </a>
           </div>
         </nav>
+
       </div>
-    </footer>
+
+      <aside className="bg-black py-5 text-center">
+        <p>Copyright © {new Date().getFullYear()} - All right reserved by PB</p>
+      </aside>
+
+
+    </footer >
   );
 }

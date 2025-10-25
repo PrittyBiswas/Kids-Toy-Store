@@ -35,7 +35,7 @@ export default function Slider() {
         {sliderData.map((item) => (
           <div key={item.id} id={item.id} className="carousel-item w-full">
 
-            <div className="w-full h-[17.5rem] overflow-hidden relative">
+            <div className="w-full h-80 overflow-hidden relative flex items-center justify-center">
               <img
                 src={item.src}
                 className="w-full h-full object-cover"
@@ -66,7 +66,7 @@ export default function Slider() {
         ))}
       </div>
 
-      <div className="flex w-full justify-center gap-2 py-2">
+      <div className="flex w-full justify-center gap-2 ">
         {sliderData.map((item) => (
           <a key={item.num} href={`#${item.id}`} className="btn btn-xs">
             {item.num}
