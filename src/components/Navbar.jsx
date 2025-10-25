@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar sticky top-0 z-50 shadow-md bg-base-300 text-base-content ">
+    <nav className="navbar  top-0 z-50 shadow-md bg-gray-700 text-base-content ">
       <div className="container mx-auto flex justify-between items-center font-bold">
         {/* Logo */}
         <Link
@@ -27,11 +27,12 @@ export default function Navbar() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `px-3 py-1 rounded-md transition ${isActive
-                ? "text-pink-700 bg-pink shadow-sm underline"
+              `px-3 py-1  transition ${isActive
+                ? "text-pink-700 bg-pink shadow-sm border-b-2 border-pink-700"
                 : "text-pink-700 hover:text-white hover:bg-pink-500"
               }`
             }
+
           >
             Home
           </NavLink>
@@ -39,8 +40,8 @@ export default function Navbar() {
           <NavLink
             to="/profile"
             className={({ isActive }) =>
-              `px-3 py-1 rounded-md transition ${isActive
-                ? "text-pink-700 bg-pink shadow-sm underline"
+              `px-3 py-1  transition ${isActive
+                ? "text-pink-700 bg-pink shadow-sm border-b-2 border-pink-700"
                 : "text-pink-700 hover:text-white hover:bg-pink-500"
               }`
             }
@@ -51,10 +52,9 @@ export default function Navbar() {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `px-3 py-1 rounded-md transition ${isActive
-                ? "text-pink-700 bg-pink shadow-sm underline"
+              `px-3 py-1  transition ${isActive
+                ? "text-pink-700 bg-pink shadow-sm border-b-2 border-pink-700"
                 : "text-pink-700 hover:text-white hover:bg-pink-500"
-
               }`
             }
           >
@@ -75,7 +75,7 @@ export default function Navbar() {
               </div>
               <button
                 onClick={onLogout}
-                className="btn btn-outline btn-sm  border-pink-400 text-pink-800 hover:bg-pink-400 hover:text-white transition"
+                className="btn btn-outline btn-sm  border-pink-400 text-pink-800 hover:bg-pink-700 hover:text-white px-3 py-1 transition"
               >
                 Logout
               </button>
@@ -83,7 +83,7 @@ export default function Navbar() {
           ) : (
             <Link
               to="/login"
-              className="btn btn-primary rounded-full bg-pink-500 border-none text-white hover:bg-pink-600 transition"
+              className="btn btn-primary bg-pink-500 border-none text-white hover:bg-pink-700 px-3 py-1 transition"
             >
               Login
             </Link>

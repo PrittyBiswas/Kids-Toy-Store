@@ -34,20 +34,22 @@ export default function Home() {
       </section>
 
       {/* Fun sections */}
-      <section className="mt-16 px-4 text-center bg-gray-100 py-12" data-aos="fade-up">
-        <h1 className="text-4xl font-extrabold text-gray-800">Let's Fun Buddy's</h1>
-        <div className="mt-16 mb-18 grid md:grid-cols-2 gap-8" data-aos="fade-up">
-          <div className="p-8 bg-gradient-to-r from-yellow-50 to-pink-50 rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-bold text-pink-700">🎁 Local Seller Spotlight</h3>
-            <p className="mt-2 text-gray-600">
-              Discover featured local sellers supporting creativity in your community.
-            </p>
-          </div>
-          <div className="p-8 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-bold text-emerald-700">💡 Gift Ideas</h3>
-            <p className="mt-2 text-gray-600">
-              Find perfect gift ideas for all age groups — fun, educational, and unique!
-            </p>
+      <section className=" bg-gray-700 ">
+        <div className="mt-16 px-4 text-center py-12" data-aos="fade-up">
+          <h1 className="text-4xl font-extrabold text-white">Let's Fun Buddy's</h1>
+          <div className="mt-16 mb-18 grid md:grid-cols-2 gap-8" data-aos="fade-up">
+            <div className="p-8 bg-gradient-to-r from-yellow-50 to-pink-50 rounded-xl shadow hover:shadow-lg transition">
+              <h3 className="text-xl font-bold text-pink-700">🎁 Local Seller Spotlight</h3>
+              <p className="mt-2 text-gray-600">
+                Discover featured local sellers supporting creativity in your community.
+              </p>
+            </div>
+            <div className="p-8 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-xl shadow hover:shadow-lg transition">
+              <h3 className="text-xl font-bold text-emerald-700">💡 Gift Ideas</h3>
+              <p className="mt-2 text-gray-600">
+                Find perfect gift ideas for all age groups — fun, educational, and unique!
+              </p>
+            </div>
           </div>
         </div>
       </section>

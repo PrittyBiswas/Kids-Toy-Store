@@ -37,13 +37,13 @@ export default function ToyDetails() {
         <p>Available: {toy.availableQuantity}</p>
       </div>
       <div>
-        <form onSubmit={handleTryNow} className="card p-6 shadow">
+        <form onSubmit={handleTryNow} className="card p-6 shadow border border-white">
           <h3 className="text-xl font-semibold mb-4">Try Now</h3>
           <label className="label">Name</label>
-          <input value={name} onChange={(e) => setName(e.target.value)} className="input input-bordered w-full" />
+          <input value={name} onChange={(e) => setName(e.target.value)} className="input input-bordered w-full pl-3" />
           <label className="label">Email</label>
-          <input value={email} onChange={(e) => setEmail(e.target.value)} className="input input-bordered w-full" />
-          <button className="btn btn-primary mt-4">Try Now</button>
+          <input value={email} onChange={(e) => setEmail(e.target.value)} className="input input-bordered w-full pl-3" />
+          <button className="btn bg-pink-500 hover:bg-pink-700 font-bold mt-4">Try Now</button>
         </form>
       </div>
     </div>

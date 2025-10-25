@@ -17,7 +17,7 @@ export default function ToyCard({ toy }) {
             <p className="font-semibold text-emerald-600">${toy.price}</p>
             <p className="text-sm text-yellow-600">⭐ {toy.rating}</p>
           </div>
-          <Link to={`/toy/${toy.toyId}`} className="btn btn-outline btn-sm text-green-600 border-pink-400 hover:bg-pink-400 hover:text-white-500 transition">
+          <Link to={`/toy/${toy.toyId}`} className="btn bg-white btn-sm border border-green-600 text-green-600 hover:bg-pink-400 hover:text-white hover:border-pink-500 transition">
             View More
           </Link>
         </div>
