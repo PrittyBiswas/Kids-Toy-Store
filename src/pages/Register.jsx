@@ -42,7 +42,8 @@ export default function Register() {
         icon: "success",
         title: "Account Created!",
         text: "Welcome to ToyTopia 🎉",
-        confirmButtonColor: "#2563eb",
+        confirmButtonColor: "#46923c",
+
       });
       navigate("/login");
     } catch (err) {
@@ -50,7 +51,7 @@ export default function Register() {
         icon: "error",
         title: "Registration Failed",
         text: err.message,
-        confirmButtonColor: "#ef4444",
+        confirmButtonColor: "#FF0000",
       });
     }
   };
@@ -61,7 +62,7 @@ export default function Register() {
       Swal.fire({
         icon: "success",
         title: "Google Sign-Up Successful!",
-        confirmButtonColor: "#2563eb",
+        confirmButtonColor: "#46923c",
       });
       navigate("/");
     } catch (err) {

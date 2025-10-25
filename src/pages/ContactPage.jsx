@@ -43,7 +43,7 @@ export default function ContactPage() {
 
     return (
         <main className="min-h-screen flex items-center justify-center p-6  text-gray-800">
-            <section className="w-full max-w-6xl rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
+            <section className="w-full max-w-6xl rounded-xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
                 {/* LEFT: Contact Info */}
                 <div className="p-8 md:p-12 bg-pink-50">
                     <h1 className="text-3xl sm:text-4xl font-extrabold text-whi">Get in touch</h1>
@@ -172,7 +172,7 @@ export default function ContactPage() {
                         </label>
 
                         <label className="block">
-                            <span className="text-sm font-medium text-pink-700">Message</span>
+                            <span className="text-sm font-medium text-white ">Message</span>
                             <textarea
                                 name="message"
                                 rows="5"
@@ -194,7 +194,7 @@ export default function ContactPage() {
                                     onChange={handleChange}
                                     className="h-4 w-4 rounded border-pink-300 text-pink-500 focus:ring-pink-400"
                                 />
-                                <label htmlFor="newsletter" className="text-sm text-pink-700">
+                                <label htmlFor="newsletter" className="text-sm text-white">
                                     Subscribe to updates
                                 </label>
                             </div>

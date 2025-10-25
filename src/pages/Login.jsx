@@ -25,7 +25,7 @@ export default function Login() {
         icon: "success",
         title: "Welcome back!",
         text: "You’re now logged in.",
-        confirmButtonColor: "#2563eb",
+        confirmButtonColor: "#46923c",
       });
       navigate(from, { replace: true });
     } catch (err) {
@@ -33,7 +33,7 @@ export default function Login() {
         icon: "error",
         title: "Login Failed",
         text: err.message,
-        confirmButtonColor: "#ef4444",
+        confirmButtonColor: "#FF0000",
       });
     }
   };
@@ -44,7 +44,7 @@ export default function Login() {
       Swal.fire({
         icon: "success",
         title: "Google Login Successful!",
-        confirmButtonColor: "#2563eb",
+        confirmButtonColor: "#46923c",
       });
       navigate(from, { replace: true });
     } catch (err) {
@@ -85,7 +85,7 @@ export default function Login() {
             </label>
             <input
               type="password"
-              placeholder="••••••••"
+              placeholder=" "
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required

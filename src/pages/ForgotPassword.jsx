@@ -15,22 +15,50 @@ export default function ForgotPassword() {
 
   const handleReset = async (e) => {
     e.preventDefault();
+
+    if (!email) {
+      Swal.fire("Error", "Please enter your email address.", "error");
+      return;
+    }
+
     try {
       await resetPassword(email);
-      Swal.fire("Success", "Password reset email sent. Open your Gmail to complete.", "success");
-      window.open("https://mail.google.com", "_blank");
+      Swal.fire({
+        icon: "success",
+        title: "Password reset email sent!",
+        text: "Check your inbox or spam folder.",
+        confirmButtonColor: "#46923c"
+      });
+
+      setTimeout(() => {
+        window.open("https://mail.google.com", "_blank");
+      }, 1000);
     } catch (err) {
-      Swal.fire("Error", err.message, "error");
+      Swal.fire("Error", err.message || "Failed to send reset email.", "error");
     }
   };
 
   return (
-    <div className="max-w-md mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Reset Password</h2>
-      <form onSubmit={handleReset} className="card p-6 shadow">
-        <label className="label">Email</label>
-        <input value={email} onChange={(e) => setEmail(e.target.value)} className="input input-bordered w-full" />
-        <button className="btn btn-primary mt-4">Send Reset Email</button>
+    <div className="max-w-md mx-auto my-10">
+      <h2 className="text-2xl font-bold mb-4 text-center text-pink-600">
+        Reset Password
+      </h2>
+      <form onSubmit={handleReset} className="card bg-base-100 p-6 shadow-lg">
+        <label className="label font-semibold">Email</label>
+        <input
+          type="email"
+          value={email}
+          placeholder="you@example.com"
+          onChange={(e) => setEmail(e.target.value)}
+          className="input input-bordered w-full"
+          required
+        />
+        <button
+          type="submit"
+          className="btn bg-pink-600 hover:bg-pink-700 text-white mt-4 w-full"
+        >
+          Send Reset Email
+        </button>
       </form>
     </div>
   );
